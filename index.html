@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry Genius</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="lg:mx-12 lg:mt-6 ">
+        <div class="navbar bg-blue-300 px-4 lg:px-12 lg:rounded-lg py-5">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost  lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mt-1 mr-[-10px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+              </div>
+              <div class="flex flex-col items-center">
+                <h2 class=" text-xl lg:text-3xl text-gray-800 font-bold">Interactive</h2>
+                <p class="text-xl text-gray-700 lg:flex hidden ">Geometry Genius</p>
+              </div>
+              
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              
+            </div>
+            <div class="navbar-end">
+              <button class="px-4 py-2 bg-blue-700 text-white text-lg rounded-md">Blog</button>
+            </div>
+          </div>
+    </header>
+    <main class="px-10 my-10 lg:my-10">
+        <!-- container -->
+        <div class="flex flex-col-reverse lg:flex-row justify-around">
+            <!-- Shape container -->
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- first card -->
+                <div class="card lg:w-80 bg-base-100 shadow-xl border p-3 border-gray-300">
+                    <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                      <h2 class="text-2xl font-semibold text-center">Triangle</h2>
+                      <p class="text-center text-lg">Area (A) = 0.5 X b X h</p>
+                      <p class="flex items-center justify-center pt-3">
+                        <input id="base" type="text" placeholder="b" class="border text-xl bg-gray-100 px-3 w-20 rounded-md">
+                        <span class="ml-2 text-lg mr-2">cm</span>
+                        <input id="height" type="text" placeholder="h" class="border text-xl bg-gray-100 px-3 w-20 rounded-md">
+                        <span class="ml-2  text-lg">cm</span>
+                      </p>
+                      <p id="visible" class="text-center pt-5 text-lg  hidden">Area: <span class="area"></span> cm<sup>2</sup></p>
+                      <div class="flex justify-center pt-8">
+                        <button id="area-calculate" class=" bg-blue-700 text-white py-2 rounded-md w-64 hover:bg-blue-600 font-medium text-lg">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <!-- second card -->
+                <div class="card lg:w-80 bg-base-100 shadow-xl  border border-gray-300 p-3">
+                    <figure><img src="/images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="text-2xl font-semibold text-center">Rectangle</h2>
+                        <p class="text-center text-lg">Area (A) = w X I</p>
+                        <p class="flex items-center justify-center pt-3">
+                          <input id="W" type="text" placeholder="W" class="border text-xl bg-gray-100 px-3 w-20 rounded-md">
+                          <span class="ml-2 text-lg mr-2">cm</span>
+                          <input id="L" type="text" placeholder="I" class="border text-xl bg-gray-100 px-3 w-20 rounded-md">
+                          <span class="ml-2  text-lg">cm</span>
+                        </p>
+                        <p id="visible2" class="text-center pt-5 text-lg  hidden">Area: <span class="area-rec"></span> cm<sup>2</sup></p>
+                        <div class="flex justify-center pt-8">
+                          <button id="area-calculate2" class=" bg-blue-700 text-white py-2 rounded-md w-64 hover:bg-blue-600 font-medium text-lg">Calculate</button>
+                        </div>
+                    </div>
+                  </div>
+              
+                <!-- third card -->
+                <div class="card lg:w-80 bg-base-100 shadow-xl  border border-gray-300 p-3">
+                    <figure><img src="/images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="text-2xl font-semibold text-center">Ellipse</h2>
+                        <p class="text-center text-lg">Area (A) = Pi X a X b</p>
+                        <p class="flex items-center justify-center pt-3">
+                          <input id="A" type="text" placeholder="a" class="border text-xl bg-gray-100 px-3 w-20 rounded-md">
+                          <span class="ml-2 text-lg mr-2">cm</span>
+                          <input id="B" type="text" placeholder="b" class="border text-xl bg-gray-100 px-3 w-20 rounded-md">
+                          <span class="ml-2  text-lg">cm</span>
+                        </p>
+                        <p id="visible3" class="text-center pt-5 text-lg  hidden">Area: <span class="area-elc"></span> cm<sup>2</sup></p>
+                        <div class="flex justify-center pt-8">
+                          <button id="area-calculate3" class=" bg-blue-700 text-white py-2 rounded-md w-64 hover:bg-blue-600 font-medium text-lg">Calculate</button>
+                        </div>
+                    </div>
+                  </div>
+
+            </div>
+
+            <!--area container  -->
+            <div class=" border border-gray-300 lg:mb-0 mb-10 rounded-lg p-5 lg:w-[380px]">
+                <div class="text-3xl text-center pb-5 underline underline-offset-8">Area Calculation</div>
+                <div id="list-container1" class=" pb-3 hidden  items-center justify-between">
+                   <h1 class=" font-bold">Triangle</h1>
+                   <div class="flex items-center gap-1 font-bold">
+                    <span class="area"></span>
+                    <span id="m2" class="block">cm <sup>2</sup></span>
+                   </div>
+                   
+                   <button class="bg-blue-600 px-3 py-1 rounded-md text-white" id="meter-converter">Convert to m<sup>2</sup></button>
+                </div>
+                <div id="list-container2" class=" pb-3 hidden  items-center justify-between">
+                   <h1 class=" font-bold">Rectangle</h1>
+                   <div class="flex items-center gap-1 font-bold">
+                    <span class="area-rec"></span>
+                    <span id="m22" class="block">cm <sup>2</sup></span>
+                   </div>
+                   
+                   <button class="bg-blue-600 px-3 py-1 rounded-md text-white" id="meter-converter2">Convert to m<sup>2</sup></button>
+                </div>
+                <div id="list-container3" class=" pb-3 hidden  items-center justify-between">
+                   <h1 class=" font-bold">Ellipse</h1>
+                   <div class="flex items-center gap-1 font-bold">
+                    <span class="area-elc"></span>
+                    <span id="m23" class="block">cm <sup>2</sup></span>
+                   </div>
+                   
+                   <button class="bg-blue-600 px-3 py-1 rounded-md text-white" id="meter-converter3">Convert to m<sup>2</sup></button>
+                </div>
+               
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
