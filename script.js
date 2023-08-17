@@ -32,7 +32,7 @@ areaButton.addEventListener("click", function(){
     converter.addEventListener("click", function(){
         const m2 = document.getElementById("m2")
         m2.style.display = "none"
-        const meter = areaCal/ 1000
+        const meter = areaCal/ 10000
         area[1].innerText = meter + " m^2"
     })
 
@@ -86,7 +86,7 @@ areaButton2.addEventListener("click", function(){
     converter2.addEventListener("click", function(){
         const m22 = document.getElementById("m22")
         m22.style.display = "none"
-        const meter2 = area/ 1000
+        const meter2 = area/ 10000
         area_rec[1].innerText = meter2 + " m^2"
     })
 
@@ -138,7 +138,7 @@ areaButton3.addEventListener("click", function(){
            converter3.addEventListener("click", function(){
             const m23 = document.getElementById("m23")
             m23.style.display = "none"
-            const meter3 = area1 / 1000
+            const meter3 = area1 / 10000
             const fixed = meter3.toFixed(2)
             area_elc[1].innerText = fixed + " m^2"
            })
